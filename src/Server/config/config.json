@@ -1,0 +1,29 @@
+{
+  "local": {
+    "username": "postgres",
+    "password": "abcd1234",
+    "database": "qty-converstion-dev",
+    "host": "127.0.0.1",
+    "dialect": "postgres",
+    "operatorsAliases": false
+  },
+  "development": {
+    "use_env_variable": "DB_URL"
+  },
+  "test": {
+    "username": "postgres",
+    "password": "abcd1234",
+    "database": "qty-converstion-qa",
+    "host": "127.0.0.1",
+    "dialect": "postgres",
+    "operatorsAliases": false
+  },
+  "production": {
+    "username": "postgres",
+    "password": "abcd1234",
+    "database": "qty-converstion-prd",
+    "host": "127.0.0.1",
+    "dialect": "postgres",
+    "operatorsAliases": false
+  }
+}

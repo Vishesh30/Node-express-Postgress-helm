@@ -1,0 +1,15 @@
+node_modules/
+coverage/
+sap/
+$tmp-*/
+x4/
+*.js.map
+*.log
+!options.js
+.DS_store
+downloads/
+.history
+.idea/
+coverage/
+.nyc_output/
+.tsBuildInfoFile
