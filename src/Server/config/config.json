@@ -8,7 +8,7 @@
     "operatorsAliases": false
   },
   "development": {
-    "use_env_variable": "DB_URL"
+    "use_env_variable": "POSTGRES_HOST"
   },
   "test": {
     "username": "postgres",
