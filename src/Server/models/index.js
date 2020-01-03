@@ -12,25 +12,26 @@ const db = {};
 let sequelize;
 console.log(process.env);
 if (config.use_env_variable) {
+  sequelize = new Sequelize(process.env.POSTGRES_HOST, config);
   // sequelize = new Sequelize(
-  //   "postgres://postgresadmin:admin123@elder-kudu.default.svc.cluster.local:5432",
+  //   process.env.POSTGRES_HOST,
+  //   process.env.POSTGRES_USER,
+  //   process.env.POSTGRES_PASSWORD,
   //   config
   // );
-  sequelize = new Sequelize(
-    process.env.POSTGRES_HOST,
-    process.env.POSTGRES_USER,
-    process.env.POSTGRES_PASSWORD,
-    "postgres"
-  );
 } else {
-  sequelize = new Sequelize(
-    config.database,
-    config.username,
-    config.password,
-    config
-  );
+  try {
+    sequelize = new Sequelize(
+      config.database,
+      config.username,
+      config.password,
+      config
+    );
+  } catch (error) {
+    console.log(error);
+  }
 }
-
+console.log("Sequelize = " + sequelize);
 fs.readdirSync(__dirname)
   .filter(file => {
     return (
