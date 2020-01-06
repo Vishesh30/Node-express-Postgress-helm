@@ -12,6 +12,12 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use("/api", appRoutes);
 
+//sync DB
+const model = require("./Server/models");
+model.converstionRateModels.sync({ force: false }).then(() => {
+  console.log("DB Created successfully");
+});
+
 require("./Server/routes/routes")(app);
 app.get("*", (req, res) =>
   res.status(200).send({

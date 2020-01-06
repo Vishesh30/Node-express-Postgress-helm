@@ -14,10 +14,12 @@ spec:
     spec:
       containers:
         - name: {{ template "service-chart.fullname" . }}-converstionrate
-          image: vishesh30/qtyconverstion:1.0.19
+          image: vishesh30/qtyconverstion:1.0.20
           env:
             - name: POSTGRES_HOST
               value: postgres://postgres:12345@postgres:5432/qty-converstion-dev
+            - name: NODE_ENV
+              value: "development"
 
 ---
 
