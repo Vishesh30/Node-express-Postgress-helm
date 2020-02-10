@@ -21,7 +21,7 @@ Run Below command to configure the cluster
        • helm install .
 
 
-#For helm 3 Please follow the below commands
+# For helm 3 Please follow the below commands
 
 Since helm 3 tiller is being removed and tiller is no loner required.
 
