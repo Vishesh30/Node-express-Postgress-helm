@@ -25,7 +25,7 @@ Run Below command to configure the cluster
 
 Since helm 3 tiller is being removed and tiller is no loner required.
 
-• Clone the repository from git
+• Clone the repository from git                                                                                               
 • In the git folder / Node-express-Postgress-helm - Execute the following command
 	"helm install service-chart --generate-name"
 	
